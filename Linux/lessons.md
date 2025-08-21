@@ -14,7 +14,7 @@ pwd # print the current working directory
 cat file.txt # display the contents of a file
 head -n 10 file.txt # show the first 10 lines of a file
 tail -n 10 file.txt # show the last 10 lines of a file
-less -N lessons.md # 
+less -N lessons.md # view a file with line numbers
 
 touch newfile.txt # create an empty file
 mkdir my_directory # create a new directory
@@ -72,6 +72,31 @@ man ls # view the manual for a command
 wc -c pr_ideas.txt # count the number of bytes in a file. 1098 pr_ideas.txt
 wc -w pr_ideas.txt # count the number of words in a file. 198 pr_ideas.txt
 curl -h # display help for the curl command
+
+echo $? # print the exit status of the last command
+grep "Marshal" worldbanc/private/transactions/2020.csv # search for a string in a file
+
+# Standard Error
+# Redirect stderr to a File
+# Running this script from parent directory
+./worldbanc/private/bin/process_transactions.sh worldbanc/private/transactions/2020.csv 2> /tmp/worldbanc.log
+cat /tmp/worldbanc.log # view the log file
+
+# Standard Input
+# Redirect stdin to a File
+# Running this script from parent directory
+./worldbanc/private/bin/process_transactions.sh worldbanc/private/transactions/2020.csv > /tmp/worldbanc.log
+cat /tmp/worldbanc.log # view the log file
+
+# Piping
+# Use the pipe operator to pass output from one command to another
+cat worldbanc/private/transactions/2020.csv | grep "Marshal" | wc -w # count the number of words containing "Marshal"
+grep -R "Bob" worldbanc/private/transactions --exclude-dir="backups" | wc -l # count the number of lines containing "Bob" in the transactions directory, excluding backups
+
+# Kill a Process
+ps aux | grep "process_name" # find the process ID (PID) of a running
+ps aux | grep malicious.sh # find the PID of a script. Second column is the PID
+kill 77837
 ```
 
 
