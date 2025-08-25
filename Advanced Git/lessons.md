@@ -11,6 +11,8 @@ git reset --soft HEAD~1 #
 // *  Устсан branch-ын сүүлчийн commit-оос эргэж СЭРГЭЭХ - Recovery.
 ```
 
+`1`. Option 1. 
+
 ```bash
 git reflog # displays the reference log for the local repository
 git cat-file -p commit_hash # shows the content of a specific commit
@@ -25,4 +27,12 @@ git cat-file -p <tree sha>
 git cat-file -p <blob sha> > slander.md
 git add .
 git commit -m "B: recovery"
+```
+
+`2`. Option 2. 
+> git merge HEAD@{1} merges the changes from the commit at HEAD@{1} into the current branch. This is useful if you want to recover changes that were made in a previous commit without resetting your current branch to that commit.
+
+```bash
+git reflog # find the commit sha at HEAD@{1}
+git merge HEAD@{1} # merge the changes from that commit into the current branch
 ```
