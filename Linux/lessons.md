@@ -88,10 +88,12 @@ cat /tmp/worldbanc.log # view the log file
 ./worldbanc/private/bin/process_transactions.sh worldbanc/private/transactions/2020.csv > /tmp/worldbanc.log
 cat /tmp/worldbanc.log # view the log file
 
-# Piping
+# Piping ( | )
 # Use the pipe operator to pass output from one command to another
 cat worldbanc/private/transactions/2020.csv | grep "Marshal" | wc -w # count the number of words containing "Marshal"
 grep -R "Bob" worldbanc/private/transactions --exclude-dir="backups" | wc -l # count the number of lines containing "Bob" in the transactions directory, excluding backups
+grep "phoneRegex" ./src/routes/v2/agent_qr/set_qr.js | less # search for "phoneRegex" in a specific file and view with less
+```
 
 # Kill a Process
 ps aux | grep "process_name" # find the process ID (PID) of a running
