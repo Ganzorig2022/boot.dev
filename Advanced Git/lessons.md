@@ -5,13 +5,14 @@ git reset --soft HEAD~1 #
 ```
 
 #### Reflog
+
 > These commands are performing low-level recovery of a lost file using Git’s object database. They’re useful when a file was deleted or history was rewritten, and you can’t restore it using normal commands like git checkout. Each step walks through Git’s data model: HEAD → Commit → Tree → Blob.
 
 ```js
 // *  Устсан branch-ын сүүлчийн commit-оос эргэж СЭРГЭЭХ - Recovery.
 ```
 
-`1`. Option 1. 
+`1`. Option 1.
 
 ```bash
 git reflog # displays the reference log for the local repository
@@ -29,7 +30,8 @@ git add .
 git commit -m "B: recovery"
 ```
 
-`2`. Option 2. 
+`2`. Option 2.
+
 > git merge HEAD@{1} merges the changes from the commit at HEAD@{1} into the current branch. This is useful if you want to recover changes that were made in a previous commit without resetting your current branch to that commit.
 
 ```bash
@@ -49,3 +51,10 @@ git add .
 git commit -m "Resolved merge conflict"
 git reset --hard HEAD~1 # undo merge commit. one commit backward
 ```
+
+#### Resetting Commits
+
+````bash
+git reset --soft COMMITHASH # reset to specific commit, KEEPING all changes after it
+git reset --hard COMMITHASH # reset to specific commit, DISCARDING all changes after it. But DANGEROUS!. It would be deleted FOREVER!.
+````
