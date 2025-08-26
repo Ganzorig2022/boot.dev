@@ -36,4 +36,5 @@ git commit -m "B: recovery"
 git reflog # find the commit sha at HEAD@{1}. = your memory of past HEAD positions.
 HEAD@{1} # one step back in that memory.
 git merge HEAD@{1} # "take my old self and merge it into who I am now."
+jayson,gross,htmz,contributor
 ```
