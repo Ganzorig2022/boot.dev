@@ -5,6 +5,7 @@ git reset --soft HEAD~1 #
 ```
 
 #### Log
+
 ```bash
 git log --oneline # shows a summary of commits
 git log --oneline -p # shows a summary of commits with diffs
@@ -14,6 +15,7 @@ git log --oneline --graph --decorate --all # shows a graphical representation of
 ```
 
 #### Branch
+
 ```bash
 git checkout -b new-branch # create and switch to a new branch
 git branch -m new-branch-name # rename the current branch
@@ -77,28 +79,29 @@ git add .
 
 #### Resetting Commits. (Removing Commits)
 
-````bash
+```bash
 # Case 1. You want to combine multiple commits into one (squash) manually.
 # Case 2. You made a commit too early and want to amend it without retyping everything.
-git reset --soft COMMITHASH # reset to specific commit, KEEPING all changes after it.  
+git reset --soft COMMITHASH # reset to specific commit, KEEPING all changes after it.
 
 # Case 1. You want to discard all changes after a specific commit.
 git reset --hard COMMITHASH # reset to specific commit, DISCARDING all changes after it. But DANGEROUS!. It would be deleted FOREVER!.
-````
+```
 
-#### Reverting Commits.  (Undoing Commits)
+#### Reverting Commits. (Undoing Commits)
 
 ```bash
 git log --oneline # find the commit hash you want to revert
 git revert COMMITHASH # undo specific commit, by creating a new commit that reverses the changes made in the specified commit
 ```
 
-git diff HEAD~1 # shows the changes made in the last commit
-git diff COMMITHASH1 COMMITHASH2 # shows the differences between two specific commits
-```
+> git diff HEAD~1 # shows the changes made in the last commit
+> git diff COMMITHASH1 COMMITHASH2 # shows the differences between two specific commits
 
 #### Revert vs. Reset
 
 # git reset --soft: Undo commits but keep changes staged
+
 # git reset --hard: Undo commits and discard changes
+
 # git revert: Create a new commit that undoes a previous commit
