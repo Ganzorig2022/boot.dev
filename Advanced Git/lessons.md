@@ -25,7 +25,7 @@ git branch # list all LOCAL branches
 git branch -r # list all REMOTE branches
 git switch -c new-branch # create and switch to a new branch
 ```
-
+adadasdsadasdasdasdasdsadas
 #### Reflog
 
 > These commands are performing low-level recovery of a lost file using Git’s object database. They’re useful when a file was deleted or history was rewritten, and you can’t restore it using normal commands like git checkout. Each step walks through Git’s data model: HEAD → Commit → Tree → Blob.
