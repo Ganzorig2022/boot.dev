@@ -58,6 +58,3 @@ git reset --hard HEAD~1 # undo merge commit. one commit backward
 git reset --soft COMMITHASH # reset to specific commit, KEEPING all changes after it
 git reset --hard COMMITHASH # reset to specific commit, DISCARDING all changes after it. But DANGEROUS!. It would be deleted FOREVER!.
 ````
-
-
-Asdakjdakdjakdja
