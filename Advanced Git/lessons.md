@@ -4,6 +4,28 @@ git commit --amend #
 git reset --soft HEAD~1 #
 ```
 
+#### Log
+```bash
+git log --oneline # shows a summary of commits
+git log --oneline -p # shows a summary of commits with diffs
+git log --oneline -2 # shows the last 2 commits
+git log --oneline --stat # shows a summary of commits with stats
+git log --oneline --graph --decorate --all # shows a graphical representation of the commit
+```
+
+#### Branch
+```bash
+git checkout -b new-branch # create and switch to a new branch
+git branch -m new-branch-name # rename the current branch
+git branch -d branch-name # delete a LOCAL branch
+git branch -D branch-name # force delete a LOCALbranch
+git push origin -d branch-name # delete a REMOTE branch
+
+git branch # list all LOCAL branches
+git branch -r # list all REMOTE branches
+git switch -c new-branch # create and switch to a new branch
+```
+
 #### Reflog
 
 > These commands are performing low-level recovery of a lost file using Git’s object database. They’re useful when a file was deleted or history was rewritten, and you can’t restore it using normal commands like git checkout. Each step walks through Git’s data model: HEAD → Commit → Tree → Blob.
