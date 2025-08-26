@@ -78,7 +78,11 @@ git add .
 #### Resetting Commits. (Removing Commits)
 
 ````bash
-git reset --soft COMMITHASH # reset to specific commit, KEEPING all changes after it
+# Case 1. You want to combine multiple commits into one (squash) manually.
+# Case 2. You made a commit too early and want to amend it without retyping everything.
+git reset --soft COMMITHASH # reset to specific commit, KEEPING all changes after it.  
+
+# Case 1. You want to discard all changes after a specific commit.
 git reset --hard COMMITHASH # reset to specific commit, DISCARDING all changes after it. But DANGEROUS!. It would be deleted FOREVER!.
 ````
 
