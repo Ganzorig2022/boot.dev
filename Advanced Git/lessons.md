@@ -33,6 +33,7 @@ git commit -m "B: recovery"
 > git merge HEAD@{1} merges the changes from the commit at HEAD@{1} into the current branch. This is useful if you want to recover changes that were made in a previous commit without resetting your current branch to that commit.
 
 ```bash
-git reflog # find the commit sha at HEAD@{1}
-git merge HEAD@{1} # merge the changes from that commit into the current branch
+git reflog # find the commit sha at HEAD@{1}. = your memory of past HEAD positions.
+HEAD@{1} # one step back in that memory.
+git merge HEAD@{1} # "take my old self and merge it into who I am now."
 ```
