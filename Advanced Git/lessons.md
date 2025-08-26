@@ -72,6 +72,7 @@ git merge main
 git add .
 git commit -m "Resolved merge conflict"
 git reset --hard HEAD~1 # undo merge commit. one commit backward
+git add .
 ```
 
 #### Resetting Commits. (Removing Commits)
