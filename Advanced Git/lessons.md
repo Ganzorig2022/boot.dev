@@ -108,7 +108,10 @@ git revert COMMITHASH # undo specific commit, by creating a new commit that reve
 
 
 #### Cherry-pick
+> Apply the changes from a specific commit to the current branch.
 
 ```bash
 git log --oneline # find the commit hash you want to cherry-pick
+git switch main # switch to the branch where you want to apply the commit
+git cherry-pick COMMITHASH # apply the changes from a specific commit to the current branch
 ```
