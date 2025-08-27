@@ -112,3 +112,11 @@ git revert COMMITHASH # undo specific commit, by creating a new commit that reve
 ```bash
 git log --oneline # find the commit hash you want to cherry-pick
 ```
+
+
+CANVA CANVA CANVA CANVA
+partner list
+SalesInc
+TheStartup
+ClosedML
+WorldBanc
