@@ -9,6 +9,7 @@ git reset --soft HEAD~1 #
 #### Log
 
 ```bash
+git --no-pager log --oneline # shows a summary of commits without PAGING
 git log --oneline # shows a summary of commits
 git log --oneline -p # shows a summary of commits with diffs
 git log --oneline -2 # shows the last 2 commits
