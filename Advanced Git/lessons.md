@@ -105,3 +105,10 @@ git revert COMMITHASH # undo specific commit, by creating a new commit that reve
 # git reset --hard: Undo commits and discard changes
 
 # git revert: Create a new commit that undoes a previous commit
+
+
+#### Cherry-pick
+
+```bash
+git log --oneline # find the commit hash you want to cherry-pick
+```
