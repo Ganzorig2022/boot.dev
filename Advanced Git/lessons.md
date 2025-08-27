@@ -34,9 +34,9 @@ git switch -c new-branch # create and switch to a new branch
 
 > These commands are performing low-level recovery of a lost file using Git’s object database. They’re useful when a file was deleted or history was rewritten, and you can’t restore it using normal commands like git checkout. Each step walks through Git’s data model: HEAD → Commit → Tree → Blob.
 
-##### Recovering a Deleted File
+##### Recovering a commit from a deleted branch
 
-> Устсан branch-ын сүүлчийн commit-оос эргэж СЭРГЭЭХ - Recovery.
+> Устсан branch-ын commit-оос эргэж СЭРГЭЭХ - Recovery.
 
 `1`. Option 1.
 
