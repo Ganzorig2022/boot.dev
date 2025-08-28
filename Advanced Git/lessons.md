@@ -2,7 +2,7 @@
 
 ```bash
 git log --oneline -1 -p
-git commit --amend #
+git commit --amend # Change the last commit message
 git reset --soft HEAD~1 #
 ```
 
