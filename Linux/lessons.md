@@ -13,8 +13,10 @@ ctrl + l # clear the terminal screen
 pwd # print the current working directory
 cat file.txt # display the contents of a file
 head -n 10 file.txt # show the first 10 lines of a file
+head -n -3 folder/file.txt # show all but the first 3 lines of a file
 tail -n 10 file.txt # show the last 10 lines of a file
 less -N lessons.md # view a file with line numbers
+ls -R -F # list files, underneath directories
 
 touch newfile.txt # create an empty file
 mkdir my_directory # create a new directory
@@ -101,8 +103,20 @@ ps aux | grep malicious.sh # find the PID of a script. Second column is the PID
 kill 77837
 ```
 
+#### Batch Processing with xargs
 
+```bash
+for file in */*; do echo $file; done 
 
+<!-- Advanced Git/lessons.md
+Linux/lessons.md
+Typescript/lessons.md
+Typescript/lessons.ts
+Typescript/tsconfig.json
+worldbanc/private
+worldbanc/public
+worldbanc/README.md -->
+```
 
 
 
